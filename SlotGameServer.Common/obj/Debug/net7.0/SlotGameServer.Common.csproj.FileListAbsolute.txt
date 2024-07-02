@@ -1,0 +1,14 @@
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\bin\Debug\net7.0\SlotGameServer.Common.deps.json
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\bin\Debug\net7.0\SlotGameServer.Common.dll
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\bin\Debug\net7.0\SlotGameServer.Common.pdb
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\obj\Debug\net7.0\SlotGameServer.Common.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\obj\Debug\net7.0\SlotGameServer.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\obj\Debug\net7.0\SlotGameServer.Common.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\obj\Debug\net7.0\SlotGameServer.Common.AssemblyInfo.cs
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\obj\Debug\net7.0\SlotGameServer.Common.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\obj\Debug\net7.0\SlotGameServer.Common.dll
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\obj\Debug\net7.0\refint\SlotGameServer.Common.dll
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\obj\Debug\net7.0\SlotGameServer.Common.pdb
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\obj\Debug\net7.0\ref\SlotGameServer.Common.dll
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\bin\Debug\net7.0\SlotGameServer.Common.runtimeconfig.json
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.Common\obj\Debug\net7.0\SlotGameServer.Common.genruntimeconfig.cache
