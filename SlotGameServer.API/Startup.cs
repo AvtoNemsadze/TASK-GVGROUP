@@ -1,4 +1,5 @@
 ﻿using Microsoft.OpenApi.Models;
+using SlotGameServer.API.Middleware;
 using SlotGameServer.Application;
 using SlotGameServer.Persistence;
 
@@ -17,8 +18,6 @@ namespace SlotGameServer.API
         {
             services.AddHttpContextAccessor();
             AddSwaggerDoc(services);
-
-            //services.ConfigureApplicationServices();
 
             //services.ConfigureIdentityServices(Configuration);
             services.ConfigureApplicationServices();
@@ -49,7 +48,6 @@ namespace SlotGameServer.API
             //services.AddScoped<LanguageService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
@@ -60,9 +58,9 @@ namespace SlotGameServer.API
 
             app.UseHttpsRedirection();
 
-            //app.UseMiddleware<ExceptionMiddleware>();
+            app.UseMiddleware<ExceptionMiddleware>();
 
-            //app.UseMiddleware<TimingMiddleware>();
+            app.UseMiddleware<TimingMiddleware>();
 
             app.UseAuthentication();
 
@@ -85,7 +83,7 @@ namespace SlotGameServer.API
             });
         }
 
-        private void AddSwaggerDoc(IServiceCollection services)
+        private static void AddSwaggerDoc(IServiceCollection services)
         {
             services.AddSwaggerGen(c =>
             {
@@ -93,13 +91,12 @@ namespace SlotGameServer.API
                 {
                     Description = @"JWT Authorization header using the Bearer scheme. 
                     Enter 'Bearer' [space] and then your token in the text input below.
-                    Example: 'Bearer 12345abcdef'",
+                    Example: 'Bearer 25785abcdefgh'",
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.ApiKey,
                     Scheme = "Bearer"
                 });
-                //c.DocumentFilter<AcceptLanguageOperationFilter>();
 
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement()
                 {
