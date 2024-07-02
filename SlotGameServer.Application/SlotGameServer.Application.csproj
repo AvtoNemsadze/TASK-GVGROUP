@@ -19,5 +19,9 @@
     <ProjectReference Include="..\SlotGameServer.Common\SlotGameServer.Common.csproj" />
     <ProjectReference Include="..\SlotGameServer.Domain\SlotGameServer.Domain.csproj" />
   </ItemGroup>
+	
+  <ItemGroup>
+    <Folder Include="Spin\Queries\" />
+  </ItemGroup>
 
 </Project>
