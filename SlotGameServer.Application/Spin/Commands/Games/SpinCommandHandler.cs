@@ -25,19 +25,29 @@ public class SpinCommandHandler : IRequestHandler<SpinCommand, SpinResult>
         bool isWin = resultNumber == request.ChosenNumber;
 
         decimal winnings = 0;
+        string message;
+
         if (isWin)
         {
             winnings = request.BetAmount * 2;  // Double the bet amount for winnings
+            message = $"Congratulations! You won {winnings}!";
+        }
+        else
+        {
+            winnings = 0;
+            message = "Sorry, you lost. Better luck next time!";
         }
 
-        // Update user balance, record transaction, etc.
-        // (This logic would go here, including database updates)
+        // Here you would typically update the user's balance in your database
+        // For example, increasing the balance if they win, and decrementing if they lose
 
         return new SpinResult
         {
             IsWin = isWin,
             ResultNumber = resultNumber,
-            Winnings = winnings
+            BetAmount = request.BetAmount,
+            Winnings = winnings,
+            Message = message
         };
     }
 }

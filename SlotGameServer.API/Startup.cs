@@ -1,4 +1,5 @@
 ﻿using Microsoft.OpenApi.Models;
+using SlotGameServer.Application;
 using SlotGameServer.Persistence;
 
 namespace SlotGameServer.API
@@ -20,7 +21,7 @@ namespace SlotGameServer.API
             //services.ConfigureApplicationServices();
 
             //services.ConfigureIdentityServices(Configuration);
-            //services.ConfigureApplicationServices();
+            services.ConfigureApplicationServices();
             services.ConfigurePersistenceServices(Configuration);
             //services.ConfigureInfrastructureServices(Configuration);
             services.AddControllers();
@@ -34,12 +35,12 @@ namespace SlotGameServer.API
             });
 
             // Add API versioning configuration
-            //services.AddApiVersioning(setupAction =>
-            //{
-            //    setupAction.AssumeDefaultVersionWhenUnspecified = true;
-            //    setupAction.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
-            //    setupAction.ReportApiVersions = true;
-            //});
+            services.AddApiVersioning(setupAction =>
+            {
+                setupAction.AssumeDefaultVersionWhenUnspecified = true;
+                setupAction.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+                setupAction.ReportApiVersions = true;
+            });
 
             //services.AddScoped<ITeamAuthorizationService, TeamAuthorizationService>();
             //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
