@@ -19,7 +19,7 @@ namespace SlotGameServer.Application.Spin.Commands.Games
         public async Task<SpinResult> Handle(SpinCommand request, CancellationToken cancellationToken)
         {
             var rng = new Random();
-            int resultNumber = rng.Next(1, 11);  // Random number between 1 and 10
+            int resultNumber = rng.Next(1, 11);  
             bool isWin = resultNumber == request.ChosenNumber;
             decimal winnings = isWin ? request.BetAmount * 2 : 0;
             string message = isWin ? $"Congratulations! You won {winnings}!" : "Sorry, you lost. Better luck next time!";

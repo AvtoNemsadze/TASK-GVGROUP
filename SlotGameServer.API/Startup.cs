@@ -1,6 +1,7 @@
 ﻿using Microsoft.OpenApi.Models;
 using SlotGameServer.API.Middleware;
 using SlotGameServer.Application;
+using SlotGameServer.Identity;
 using SlotGameServer.Persistence;
 
 namespace SlotGameServer.API
@@ -19,7 +20,7 @@ namespace SlotGameServer.API
             services.AddHttpContextAccessor();
             AddSwaggerDoc(services);
 
-            //services.ConfigureIdentityServices(Configuration);
+            services.ConfigureIdentityServices(Configuration);
             services.ConfigureApplicationServices();
             services.ConfigurePersistenceServices(Configuration);
             //services.ConfigureInfrastructureServices(Configuration);
@@ -41,11 +42,7 @@ namespace SlotGameServer.API
                 setupAction.ReportApiVersions = true;
             });
 
-            //services.AddScoped<ITeamAuthorizationService, TeamAuthorizationService>();
-            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //services.AddHostedService<TaskDeadlineCheckerService>();
-            //services.AddHostedService<BlockedTeamMembersChecker>();
-            //services.AddScoped<LanguageService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

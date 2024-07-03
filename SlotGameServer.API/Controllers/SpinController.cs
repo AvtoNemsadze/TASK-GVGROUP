@@ -17,6 +17,7 @@ namespace SlotGameServer.API.Controllers
         }
 
         [HttpPost("start")]
+
         public async Task<IActionResult> StartGame(StartGameCommand command)
         {
             var result = await _mediator.Send(command);
