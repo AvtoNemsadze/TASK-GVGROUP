@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SlotGameServer.Application.Spin.Commands.Games
 {
-    internal class SpinCommandModelValidator
+    public class SpinCommandModelValidator
     {
     }
 }

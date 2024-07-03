@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SlotGameServer.Application.Spin.Commands.Games
 {
-    internal class SpinCommandModel
+    public class SpinCommandModel
     {
+        public int ChosenNumber { get; set; }
+        public decimal BetAmount { get; set; }
     }
 }

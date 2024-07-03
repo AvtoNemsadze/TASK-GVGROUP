@@ -7,6 +7,7 @@ using SlotGameServer.Domain.Entities;
 using SlotGameServer.Domain;
 using SlotGameServer.Application.Constants;
 
+
 namespace SlotGameServer.Persistence.Context
 {
     public class SlotGameServerDbContext : DbContext
@@ -26,12 +27,14 @@ namespace SlotGameServer.Persistence.Context
             }
         }
 
+
+        public DbSet<GameSessionEntity> GameSessions { get; set; }
+        public DbSet<GameBetEntity> GameBets { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(SlotGameServerDbContext).Assembly);
         }
-
-        public DbSet<ProductEntity> Products{ get; set; } 
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {

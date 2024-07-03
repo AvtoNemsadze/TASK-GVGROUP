@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SlotGameServer.Application.Spin.Commands.Games;
+using SlotGameServer.Application.Spin.Commands.Sessions;
 
 namespace SlotGameServer.API.Controllers
 {
@@ -15,23 +16,29 @@ namespace SlotGameServer.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost("spin")]
-        public async Task<IActionResult> Spin([FromBody] SpinCommand command)
+        [HttpPost("start")]
+        public async Task<IActionResult> StartGame([FromBody] StartGameCommand command)
         {
-            //if (command.BetAmount <= 0)
-            //{
-            //    return BadRequest("Bet amount must be greater than zero.");
-            //}
+            var result = await _mediator.Send(command);
+            return Ok(new { result.SessionId });
+        }
 
-            try
+        [HttpPost("spin")]
+        public async Task<IActionResult> Spin([FromBody] SpinCommandModel model)
+        {
+            if (model.BetAmount <= 0)
             {
-                var result = await _mediator.Send(command);
-                return Ok(result);
+                return BadRequest("Bet amount must be greater than zero.");
             }
-            catch (Exception ex)
-            {
-                return BadRequest($"An error occurred: {ex.Message}");
-            }
+
+            var command = new SpinCommand 
+            { 
+                BetAmount = model.BetAmount,
+                ChosenNumber = model.ChosenNumber,
+            };
+
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
     }
 }
