@@ -31,6 +31,7 @@ namespace SlotGameServer.Persistence.Context
         public DbSet<GameSessionEntity> GameSessions { get; set; }
         public DbSet<GameBetEntity> GameBets { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(SlotGameServerDbContext).Assembly);

@@ -27,8 +27,4 @@
     <ProjectReference Include="..\SlotGameServer.Common\SlotGameServer.Common.csproj" />
   </ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Repository\" />
-	</ItemGroup>
-
 </Project>
