@@ -107,21 +107,6 @@ namespace SlotGameServer.Identity.Services
             return response;
         }
 
-        public async Task<BaseAuthResponse> MakeAdminAsync(UpdatePermissionRequest request)
-        {
-            var user = await _userManager.FindByNameAsync(request.UserName);
-
-            if (user is null)
-                return new BaseAuthResponse() { IsSucceed = false, Message = "Invalid User name !!!" };
-
-            var userRoles = await _userManager.GetRolesAsync(user);
-            await _userManager.RemoveFromRolesAsync(user, userRoles);
-
-            await _userManager.AddToRoleAsync(user, "Administrator");
-
-            return new BaseAuthResponse() { IsSucceed = true, Message = "Now user is an Admin" };
-        }
-
         private async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
         {
             var userClaims = await _userManager.GetClaimsAsync(user);

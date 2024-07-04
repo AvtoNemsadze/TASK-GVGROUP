@@ -1,86 +1,25 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.Extensions.DependencyInjection;
 using SlotGameServer.Domain.Entities;
-using SlotGameServer.Domain;
-using SlotGameServer.Application.Constants;
 
 
 namespace SlotGameServer.Persistence.Context
 {
-    public class SlotGameServerDbContext : DbContext
+    public class SlotGameServerDbContext : AuditableDbContext
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
-
-        public SlotGameServerDbContext(DbContextOptions<SlotGameServerDbContext> options)
-        : base(options)
+        public SlotGameServerDbContext(DbContextOptions<SlotGameServerDbContext> options, IHttpContextAccessor httpContextAccessor)
+            : base(options, httpContextAccessor)
         {
-            try
-            {
-                _httpContextAccessor = this.GetInfrastructure().GetRequiredService<IHttpContextAccessor>();
-            }
-            catch (Exception)
-            {
-                _httpContextAccessor = new HttpContextAccessor();
-            }
         }
-
 
         public DbSet<GameSessionEntity> GameSessions { get; set; }
         public DbSet<GameBetEntity> GameBets { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(SlotGameServerDbContext).Assembly);
         }
-
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
-        {
-            AddTimestamps();
-            return base.SaveChangesAsync(cancellationToken);
-        }
-
-
-        private void AddTimestamps()
-        {
-            var entities = ChangeTracker.Entries().Where(x => x.Entity is BaseEntity
-            && (x.State == EntityState.Added || x.State == EntityState.Modified));
-
-            var currentApplicationId = _httpContextAccessor?.HttpContext?.User.FindFirst(CustomClaimTypes.Uid)?.Value ?? string.Empty;
-
-            foreach (var entity in entities)
-            {
-                if (entity.State == EntityState.Added || entity.State == EntityState.Modified)
-                {
-                    if (int.TryParse(currentApplicationId, out int userId))
-                    {
-                        if (entity.State == EntityState.Added)
-                        {
-                            ((BaseEntity)entity.Entity).CreatedAt = DateTime.UtcNow;
-                            ((BaseEntity)entity.Entity).CreateUserId = userId;
-                        }
-                        else
-                        {
-                            ((BaseEntity)entity.Entity).UpdatedAt = DateTime.UtcNow;
-                            ((BaseEntity)entity.Entity).LastModifiedUserId = userId;
-                        }
-                    }
-                    else
-                    {
-                        if (entity.State == EntityState.Added)
-                        {
-                            ((BaseEntity)entity.Entity).CreatedAt = DateTime.UtcNow;
-                        }
-                        else
-                        {
-                            ((BaseEntity)entity.Entity).UpdatedAt = DateTime.UtcNow;
-                        }
-                    }
-                }
-            }
-        }
     }
+
 }
