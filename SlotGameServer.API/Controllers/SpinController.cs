@@ -5,12 +5,15 @@ using Microsoft.AspNetCore.Mvc;
 using SlotGameServer.API.AuthConfig;
 using SlotGameServer.Application.Spin.Commands.Games;
 using SlotGameServer.Application.Spin.Commands.Sessions;
+using SlotGameServer.Application.Spin.Queries.GameBets.GetGameBetsDetails;
+using SlotGameServer.Application.Spin.Queries.GameBets.GetGameBetsList;
 
 namespace SlotGameServer.API.Controllers
 {
     [ApiController]
     //[ApiVersion("1.0")]
-    [Authorize]
+    //[Route("api/v{version:apiVersion}/[controller]")]
+    //[Authorize]
     [Route("api/[controller]")]
     public class SpinController : ControllerBase
     {
@@ -19,6 +22,7 @@ namespace SlotGameServer.API.Controllers
         private readonly IHttpContextAccessor _httpContextAccessor;
 
         public SpinController
+
             (IMediator mediator,
             IMapper mapper,
             IHttpContextAccessor httpContextAccessor)
@@ -81,6 +85,41 @@ namespace SlotGameServer.API.Controllers
             };
 
             var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        /// <summary>
+        /// Retrieves all game bets with pagination.
+        /// </summary>
+        /// <param name="parameter">The pagination parameters.</param>
+        /// <returns>A paginated list of game bet entities.</returns>
+        [HttpGet]
+        [ProducesResponseType(typeof(PaginatedResponse<GetGameBetsListModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<PaginatedResponse<GetGameBetsListModel>>> GetAll([FromQuery] GameBetsListQueryParameter parameter)
+        {
+            var query = new GetAllGameBetsQuery(parameter.PageNumber, parameter.PageSize);
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
+
+        /// <summary>
+        /// Retrieves a game bet by its ID.
+        /// </summary>
+        /// <param name="id">The ID of the game bet to retrieve.</param>
+        /// <returns>The game bet entity with the specified ID.</returns>
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var query = new GetGameBetsDetailsQuery(id);
+            var result = await _mediator.Send(query);
+            if (result == null)
+            {
+                return NotFound();
+            }
             return Ok(result);
         }
     }

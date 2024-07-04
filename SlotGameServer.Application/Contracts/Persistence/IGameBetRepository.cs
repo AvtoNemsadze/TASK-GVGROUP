@@ -5,5 +5,6 @@ namespace SlotGameServer.Application.Contracts.Persistence
 {
     public interface IGameBetRepository : IGenericRepository<GameBetEntity>
     {
+       Task<List<GameBetEntity>> GetAllAsync();
     }
 }

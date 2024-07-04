@@ -1,8 +1,8 @@
-﻿using FluentValidation.AspNetCore;
-using Microsoft.OpenApi.Models;
+﻿using Microsoft.OpenApi.Models;
 using SlotGameServer.API.Middleware;
 using SlotGameServer.Application;
 using SlotGameServer.Identity;
+using SlotGameServer.Infrastructure;
 using SlotGameServer.Persistence;
 
 namespace SlotGameServer.API
@@ -24,7 +24,7 @@ namespace SlotGameServer.API
             services.ConfigureIdentityServices(Configuration);
             services.ConfigureApplicationServices();
             services.ConfigurePersistenceServices(Configuration);
-            //services.ConfigureInfrastructureServices(Configuration);
+            services.ConfigureInfrastructureServices(Configuration);
             services.AddControllers();
 
             services.AddCors(o =>
@@ -35,7 +35,6 @@ namespace SlotGameServer.API
                     .AllowAnyHeader());
             });
 
-            // Add API versioning configuration
             services.AddApiVersioning(setupAction =>
             {
                 setupAction.AssumeDefaultVersionWhenUnspecified = true;
@@ -74,7 +73,6 @@ namespace SlotGameServer.API
 
             app.UseEndpoints(endpoints =>
             {
-                // Default
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

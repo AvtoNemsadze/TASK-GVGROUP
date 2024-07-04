@@ -1,4 +1,5 @@
-﻿using SlotGameServer.Application.Contracts.Persistence;
+﻿using Microsoft.EntityFrameworkCore;
+using SlotGameServer.Application.Contracts.Persistence;
 using SlotGameServer.Domain.Entities;
 using SlotGameServer.Persistence.Context;
 
@@ -12,5 +13,11 @@ namespace SlotGameServer.Persistence.Repository
         {
             _dbContext = dbContext;
         }
+
+        public async Task<List<GameBetEntity>> GetAllAsync()
+        {
+            return await _dbContext.Set<GameBetEntity>().AsNoTracking().ToListAsync();
+        }
+
     }
 }
