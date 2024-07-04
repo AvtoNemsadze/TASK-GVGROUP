@@ -59,12 +59,12 @@ namespace SlotGameServer.Persistence.Context
                     {
                         if (entity.State == EntityState.Added)
                         {
-                            ((BaseEntity)entity.Entity).CreatedAt = DateTime.Now;
+                            ((BaseEntity)entity.Entity).CreatedAt = DateTime.UtcNow;
                             ((BaseEntity)entity.Entity).CreateUserId = userId;
                         }
                         else
                         {
-                            ((BaseEntity)entity.Entity).UpdatedAt = DateTime.Now;
+                            ((BaseEntity)entity.Entity).UpdatedAt = DateTime.UtcNow;
                             ((BaseEntity)entity.Entity).LastModifiedUserId = userId;
                         }
                     }
@@ -72,11 +72,11 @@ namespace SlotGameServer.Persistence.Context
                     {
                         if (entity.State == EntityState.Added)
                         {
-                            ((BaseEntity)entity.Entity).CreatedAt = DateTime.Now;
+                            ((BaseEntity)entity.Entity).CreatedAt = DateTime.UtcNow;
                         }
                         else
                         {
-                            ((BaseEntity)entity.Entity).UpdatedAt = DateTime.Now;
+                            ((BaseEntity)entity.Entity).UpdatedAt = DateTime.UtcNow;
                         }
                     }
                 }

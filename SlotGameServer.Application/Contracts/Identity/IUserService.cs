@@ -4,10 +4,11 @@ namespace SlotGameServer.Application.Contracts.Identity
 {
     public interface IUserService
     {
-        Task<UserResponseModel> GetUser(int id);
-        Task<List<UserResponseModel>> GetAllUsers();
-        Task<List<UserResponseModel>> GetAdministrators();
-        Task<bool> DeleteUser(int id);
         Task<bool> UserExistAsync(int userId);
+        Task UpdateBalanceAsync(int userId, decimal amount, bool isWin);
+        Task<bool> CanUserPlaceBetAsync(int userId, decimal betAmount);
+        Task UpdatePlayerStatistics(int userId, bool isWin);
+        Task<UserResponseModel> GetUser(int id);
+        Task<bool> DeleteUser(int id);
     }
 }

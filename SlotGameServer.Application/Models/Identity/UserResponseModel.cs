@@ -14,6 +14,5 @@ namespace SlotGameServer.Application.Models.Identity
         public string? Firstname { get; set; }
         public string? Lastname { get; set; }
         public DateTime? CreatedAt { get; set; }
-        public string? Role { get; set; }
     }
 }

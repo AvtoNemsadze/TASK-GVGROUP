@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SlotGameServer.Application.Contracts.Identity;
 
 namespace SlotGameServer.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -20,19 +22,6 @@ namespace SlotGameServer.API.Controllers
             return Ok(user);
         }
 
-        [HttpGet("get-all-users")]
-        public async Task<IActionResult> GetAllUsers()
-        {
-            var user = await _userService.GetAllUsers();
-            return Ok(user);
-        }
-
-        [HttpGet("get-administrators")]
-        public async Task<IActionResult> GetAdministrators()
-        {
-            var user = await _userService.GetAdministrators();
-            return Ok(user);
-        }
 
         [HttpDelete("id")]
         public async Task<IActionResult> DeleteUser(int id)

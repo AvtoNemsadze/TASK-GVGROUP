@@ -2,7 +2,7 @@
 
 namespace SlotGameServer.Application.Spin.Commands.Games
 {
-    public class SpinCommand : IRequest<SpinResult>
+    public class SpinCommand : IRequest<object>
     {
         public int CreateUserId { get; set; }
         public int SessionId { get; set; }  

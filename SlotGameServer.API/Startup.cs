@@ -1,4 +1,5 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using FluentValidation.AspNetCore;
+using Microsoft.OpenApi.Models;
 using SlotGameServer.API.Middleware;
 using SlotGameServer.Application;
 using SlotGameServer.Identity;

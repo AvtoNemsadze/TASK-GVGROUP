@@ -1,28 +1,34 @@
 ﻿using AutoMapper;
 using MediatR;
+using SlotGameServer.Application.Contracts.Identity;
 using SlotGameServer.Application.Contracts.Persistence;
 using SlotGameServer.Domain.Entities;
 
 namespace SlotGameServer.Application.Spin.Commands.Games 
 { 
-    public class SpinCommandHandler : IRequestHandler<SpinCommand, SpinResult>
+    public class SpinCommandHandler : IRequestHandler<SpinCommand, object>
     {
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _unitOfWork;
-
-        public SpinCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
+        private readonly IUserService _userService;
+        public SpinCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, IUserService userService)
         {
             _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _userService = userService ?? throw new ArgumentNullException();
         }
 
-        public async Task<SpinResult> Handle(SpinCommand request, CancellationToken cancellationToken)
+        public async Task<object> Handle(SpinCommand request, CancellationToken cancellationToken)
         {
-            var rng = new Random();
-            int resultNumber = rng.Next(1, 11);  
-            bool isWin = resultNumber == request.ChosenNumber;
-            decimal winnings = isWin ? request.BetAmount * 2 : 0;
-            string message = isWin ? $"Congratulations! You won {winnings}!" : "Sorry, you lost. Better luck next time!";
+            bool hasSufficientBalance = await _userService.CanUserPlaceBetAsync(request.CreateUserId, request.BetAmount);
+            if (!hasSufficientBalance)
+            {
+                return new InsufficientBalanceResult();
+            }
+
+            SpinResult spinResult = EvaluateSpinResult(request);
+            
+            await _userService.UpdatePlayerStatistics(request.CreateUserId, spinResult.IsWin);
 
             GameSessionEntity session = await _unitOfWork.GameSessionRepository
                 .GetOrCreateSessionAsync(request.SessionId, request.CreateUserId, cancellationToken);
@@ -32,25 +38,27 @@ namespace SlotGameServer.Application.Spin.Commands.Games
                 SessionId = session.Id,  
                 BetAmount = request.BetAmount,
                 ChosenNumber = request.ChosenNumber,
-                ResultNumber = resultNumber,
-                IsWin = isWin,
+                ResultNumber = spinResult.ResultNumber,
+                IsWin = spinResult.IsWin,
                 CreatedAt = DateTime.UtcNow
             };
 
-            await _unitOfWork.GameBetRepository.Add(bet);
+            await Task.WhenAll(
+                _unitOfWork.GameBetRepository.Add(bet),
+                _userService.UpdateBalanceAsync(request.CreateUserId, request.BetAmount, spinResult.IsWin)
+            );
             await _unitOfWork.Save();
 
-            // Update user balance
-            //var user = await _context.Users.FindAsync(new object[] { request.UserId }, cancellationToken);
-            //if (user != null)
-            //{
-            //    if (isWin)
-            //        user.Balance += winnings;  // Increase balance by winnings
-            //    else
-            //        user.Balance -= request.BetAmount;  // Deduct the bet amount from balance
+            return spinResult;
+        }
 
-            //    await _context.SaveChangesAsync(cancellationToken);
-            //}
+        private static SpinResult EvaluateSpinResult(SpinCommand request)
+        {
+            var rng = new Random();
+            int resultNumber = rng.Next(1, 11);
+            bool isWin = resultNumber == request.ChosenNumber;
+            decimal winnings = isWin ? request.BetAmount * 2 : 0;
+            string message = isWin ? $"Congratulations! You won {winnings}!" : "Sorry, you lost. Better luck next time!";
 
             return new SpinResult
             {

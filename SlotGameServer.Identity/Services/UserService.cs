@@ -10,10 +10,64 @@ namespace SlotGameServer.Identity.Services
     public class UserService : IUserService
     {
         private readonly UserManager<ApplicationUser> _userManager;
-
-        public UserService(UserManager<ApplicationUser> userManager)
+        private readonly SlotGameServerIdentityDbContext _identityDbContext;
+        public UserService(UserManager<ApplicationUser> userManager, SlotGameServerIdentityDbContext identityDbContext)
         {
             _userManager = userManager;
+            _identityDbContext = identityDbContext;
+        }
+
+        public async Task UpdateBalanceAsync(int userId, decimal amount, bool isWin)
+        {
+            var user = await _identityDbContext.Users.FindAsync(userId);
+            if (user != null)
+            {
+                if (isWin)
+                    user.Balance += amount;  
+                else
+                    user.Balance -= amount; 
+
+                _identityDbContext.Users.Update(user);
+                await _identityDbContext.SaveChangesAsync();
+            }
+        }
+
+        public async Task<bool> CanUserPlaceBetAsync(int userId, decimal betAmount)
+        {
+            var user = await _identityDbContext.Users.FindAsync(userId);
+            if (user == null)
+                throw new InvalidOperationException("User not found.");
+
+            return user.Balance >= betAmount;
+        }
+
+        public async Task UpdatePlayerStatistics(int userId, bool isWin)
+        {
+            var user = await _identityDbContext.Users.FindAsync(userId);
+            if (user == null)
+            {
+                throw new Exception("User not found."); 
+            }
+
+            user.TotalGamesPlayed++;
+            if (isWin)
+            {
+                user.TotalWins++; 
+            }
+            else
+            {
+                user.TotalLosses++;
+            }
+
+            _identityDbContext.Users.Update(user);
+            await _identityDbContext.SaveChangesAsync();
+        }
+
+
+        public async Task<bool> UserExistAsync(int userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId.ToString());
+            return user != null;
         }
 
         public async Task<UserResponseModel> GetUser(int id)
@@ -31,43 +85,7 @@ namespace SlotGameServer.Identity.Services
                 Lastname = user?.LastName,
                 UserName = user?.UserName,
                 CreatedAt = user?.CreatedAt,
-                Role = roles.FirstOrDefault(),
             };
-        }
-
-        public async Task<List<UserResponseModel>> GetAllUsers()
-        {
-            var users = await _userManager.Users.ToListAsync();
-
-            var userResponseList = users.Select(user => new UserResponseModel
-            {
-                Email = user.Email,
-                Id = user.Id,
-                Firstname = user.FirstName,
-                Lastname = user.LastName,
-                UserName = user.UserName,
-                Role = _userManager.GetRolesAsync(user).Result.FirstOrDefault()
-            }).ToList();
-
-            return userResponseList;
-        }
-
-        public async Task<List<UserResponseModel>> GetAdministrators()
-        {
-            var users = await _userManager.GetUsersInRoleAsync("Administrator");
-
-            var nonDeletedUsers = users.Where(u => !u.IsDeleted);
-
-            return nonDeletedUsers.Select(x => new UserResponseModel
-            {
-                Email = x.Email,
-                Id = x.Id,
-                Firstname = x.FirstName,
-                Lastname = x.LastName,
-                UserName = x.UserName,
-                CreatedAt = x.CreatedAt,
-                Role = _userManager.GetRolesAsync(x).Result.FirstOrDefault()
-            }).ToList();
         }
 
         public async Task<bool> DeleteUser(int id)
@@ -80,12 +98,6 @@ namespace SlotGameServer.Identity.Services
             var result = await _userManager.UpdateAsync(user);
 
             return result.Succeeded;
-        }
-
-        public async Task<bool> UserExistAsync(int userId)
-        {
-            var user = await _userManager.FindByIdAsync(userId.ToString());
-            return user != null;
         }
     }
 }
