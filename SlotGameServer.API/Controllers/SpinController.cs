@@ -13,7 +13,6 @@ namespace SlotGameServer.API.Controllers
     [ApiController]
     //[ApiVersion("1.0")]
     //[Route("api/v{version:apiVersion}/[controller]")]
-    //[Authorize]
     [Route("api/[controller]")]
     public class SpinController : ControllerBase
     {
@@ -22,7 +21,6 @@ namespace SlotGameServer.API.Controllers
         private readonly IHttpContextAccessor _httpContextAccessor;
 
         public SpinController
-
             (IMediator mediator,
             IMapper mapper,
             IHttpContextAccessor httpContextAccessor)
@@ -38,6 +36,7 @@ namespace SlotGameServer.API.Controllers
         /// <param name="command">The command containing necessary information to start a new game session.</param>
         /// <returns>Returns a newly created game session ID.</returns>
         [HttpPost("start")]
+        [Authorize(AuthenticationSchemes = "Bearer")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(object))]
         [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(string), StatusCodes.Status401Unauthorized)]

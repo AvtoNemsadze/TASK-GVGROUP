@@ -38,6 +38,8 @@ namespace SlotGameServer.Application.Spin.Commands.Games
                 SessionId = session.Id,  
                 BetAmount = request.BetAmount,
                 ChosenNumber = request.ChosenNumber,
+
+
                 ResultNumber = spinResult.ResultNumber,
                 IsWin = spinResult.IsWin,
                 CreatedAt = DateTime.UtcNow
