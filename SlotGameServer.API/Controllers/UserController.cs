@@ -4,9 +4,9 @@ using SlotGameServer.Application.Contracts.Identity;
 
 namespace SlotGameServer.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;

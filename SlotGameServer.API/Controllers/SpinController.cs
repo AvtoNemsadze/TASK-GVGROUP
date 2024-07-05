@@ -11,9 +11,8 @@ using SlotGameServer.Application.Spin.Queries.GameBets.GetGameBetsList;
 namespace SlotGameServer.API.Controllers
 {
     [ApiController]
-    //[ApiVersion("1.0")]
-    //[Route("api/v{version:apiVersion}/[controller]")]
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class SpinController : ControllerBase
     {
         private readonly IMediator _mediator;

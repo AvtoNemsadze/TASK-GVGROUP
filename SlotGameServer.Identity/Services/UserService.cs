@@ -75,15 +75,17 @@ namespace SlotGameServer.Identity.Services
             var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == id && !u.IsDeleted)
                 ?? throw new Exception($"User ({id}) Was Not Found");
 
-            var roles = await _userManager.GetRolesAsync(user);
-
             return new UserResponseModel
             {
                 Id = user.Id,
-                Email = user?.Email,
-                Firstname = user?.FirstName,
-                Lastname = user?.LastName,
-                UserName = user?.UserName,
+                Email = user.Email,
+                Firstname = user.FirstName,
+                Lastname = user.LastName,
+                UserName = user.UserName,
+                Balance = user.Balance,
+                TotalGamesPlayed = user.TotalGamesPlayed,
+                TotalWins = user.TotalWins,
+                TotalLosses = user.TotalLosses,
                 CreatedAt = user?.CreatedAt,
             };
         }
