@@ -8,13 +8,11 @@ namespace SlotGameServer.Application.Spin.Commands.Games
 { 
     public class SpinCommandHandler : IRequestHandler<SpinCommand, object>
     {
-        private readonly IMapper _mapper;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IUserService _userService;
-        public SpinCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, IUserService userService)
+        public SpinCommandHandler(IUnitOfWork unitOfWork, IUserService userService)
         {
             _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
-            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _userService = userService ?? throw new ArgumentNullException();
         }
 
@@ -38,8 +36,6 @@ namespace SlotGameServer.Application.Spin.Commands.Games
                 SessionId = session.Id,  
                 BetAmount = request.BetAmount,
                 ChosenNumber = request.ChosenNumber,
-
-
                 ResultNumber = spinResult.ResultNumber,
                 IsWin = spinResult.IsWin,
                 CreatedAt = DateTime.UtcNow

@@ -13,17 +13,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{91748E51-A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{EA2CB97F-F6E9-41C3-88DD-AF12D70DBF87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotGameServer.Common", "SlotGameServer.Common\SlotGameServer.Common.csproj", "{6197710F-21A1-4DDC-BDD6-1D482DDAE2D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotGameServer.Common", "SlotGameServer.Common\SlotGameServer.Common.csproj", "{6197710F-21A1-4DDC-BDD6-1D482DDAE2D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotGameServer.Application", "SlotGameServer.Application\SlotGameServer.Application.csproj", "{82C5169F-3158-4AC7-876F-AB45AA4C250F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotGameServer.Application", "SlotGameServer.Application\SlotGameServer.Application.csproj", "{82C5169F-3158-4AC7-876F-AB45AA4C250F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotGameServer.Domain", "SlotGameServer.Domain\SlotGameServer.Domain.csproj", "{17873B2B-3B0B-4849-B304-83891A95EA71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotGameServer.Domain", "SlotGameServer.Domain\SlotGameServer.Domain.csproj", "{17873B2B-3B0B-4849-B304-83891A95EA71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotGameServer.Identity", "SlotGameServer.Identity\SlotGameServer.Identity.csproj", "{18A6561C-8560-448A-8880-32743477A28F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotGameServer.Identity", "SlotGameServer.Identity\SlotGameServer.Identity.csproj", "{18A6561C-8560-448A-8880-32743477A28F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotGameServer.Infrastructure", "SlotGameServer.Infrastructure\SlotGameServer.Infrastructure.csproj", "{78F8495B-D9D0-4EE6-B814-8A043006375D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotGameServer.Infrastructure", "SlotGameServer.Infrastructure\SlotGameServer.Infrastructure.csproj", "{78F8495B-D9D0-4EE6-B814-8A043006375D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotGameServer.Persistence", "SlotGameServer.Persistence\SlotGameServer.Persistence.csproj", "{4398E98F-3C58-43D6-8D3F-7B0F1FDE9EC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotGameServer.Persistence", "SlotGameServer.Persistence\SlotGameServer.Persistence.csproj", "{4398E98F-3C58-43D6-8D3F-7B0F1FDE9EC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{8D79DC2F-5FA5-4D77-9D42-79F948388875}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotGameServer.Application.UnitTests", "SlotGameServer.Application.UnitTests\SlotGameServer.Application.UnitTests.csproj", "{7B0E4FA6-9803-489E-8716-BB62608F7544}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +63,10 @@ Global
 		{4398E98F-3C58-43D6-8D3F-7B0F1FDE9EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4398E98F-3C58-43D6-8D3F-7B0F1FDE9EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4398E98F-3C58-43D6-8D3F-7B0F1FDE9EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B0E4FA6-9803-489E-8716-BB62608F7544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B0E4FA6-9803-489E-8716-BB62608F7544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B0E4FA6-9803-489E-8716-BB62608F7544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B0E4FA6-9803-489E-8716-BB62608F7544}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +79,7 @@ Global
 		{18A6561C-8560-448A-8880-32743477A28F} = {EA2CB97F-F6E9-41C3-88DD-AF12D70DBF87}
 		{78F8495B-D9D0-4EE6-B814-8A043006375D} = {EA2CB97F-F6E9-41C3-88DD-AF12D70DBF87}
 		{4398E98F-3C58-43D6-8D3F-7B0F1FDE9EC1} = {EA2CB97F-F6E9-41C3-88DD-AF12D70DBF87}
+		{7B0E4FA6-9803-489E-8716-BB62608F7544} = {8D79DC2F-5FA5-4D77-9D42-79F948388875}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D0CB6DE-255B-4B89-AA5A-6E1A287B5FA4}

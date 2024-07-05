@@ -1,6 +1,7 @@
 ﻿using Microsoft.OpenApi.Models;
 using SlotGameServer.API.Middleware;
 using SlotGameServer.Application;
+using SlotGameServer.Application.SignalR;
 using SlotGameServer.Identity;
 using SlotGameServer.Infrastructure;
 using SlotGameServer.Persistence;
@@ -43,6 +44,7 @@ namespace SlotGameServer.API
             });
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSignalR();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -76,6 +78,8 @@ namespace SlotGameServer.API
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                    endpoints.MapHub<PromotionsHub>("/promotionsHub");
+                    endpoints.MapHub<GameUpdatesHub>("/gameUpdatesHub");
             });
         }
 

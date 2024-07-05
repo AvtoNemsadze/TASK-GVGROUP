@@ -97,3 +97,4 @@ C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.API\bin\Debug\net7.0\S
 C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.API\bin\Debug\net7.0\System.Security.Permissions.dll
 C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.API\bin\Debug\net7.0\YamlDotNet.dll
+C:\Users\PC\Desktop\GVGROUP\SlotGameServer\SlotGameServer.API\bin\Debug\net7.0\System.Net.WebSockets.WebSocketProtocol.dll

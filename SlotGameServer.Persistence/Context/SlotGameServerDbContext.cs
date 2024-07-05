@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore;
 using SlotGameServer.Domain.Entities;
 
@@ -13,8 +12,8 @@ namespace SlotGameServer.Persistence.Context
         {
         }
 
-        public DbSet<GameSessionEntity> GameSessions { get; set; }
         public DbSet<GameBetEntity> GameBets { get; set; }
+        public DbSet<GameSessionEntity> GameSessions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
