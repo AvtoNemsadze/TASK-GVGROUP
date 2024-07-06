@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace SlotGameServer.Application.UnitTests.Mock.Commands
+namespace SlotGameServer.Application.UnitTests.Spin.Commands
 {
     public class StartGameCommandHandlerTests
     {

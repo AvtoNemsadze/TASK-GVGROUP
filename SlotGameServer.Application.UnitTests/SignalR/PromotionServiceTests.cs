@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace SlotGameServer.Application.UnitTests.Mock.SignalR
+namespace SlotGameServer.Application.UnitTests.SignalR
 {
     public class PromotionServiceTests
     {

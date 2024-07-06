@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SlotGameServer.Application.UnitTests.Mock.SignalR
+namespace SlotGameServer.Application.UnitTests.SignalR
 {
     public class GameServiceTests
     {

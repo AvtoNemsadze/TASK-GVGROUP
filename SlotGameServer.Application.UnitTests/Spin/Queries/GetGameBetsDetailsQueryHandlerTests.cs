@@ -4,7 +4,7 @@ using SlotGameServer.Application.Spin.Queries.GameBets.GetGameBetsDetails;
 using SlotGameServer.Domain.Entities;
 using Xunit;
 
-namespace SlotGameServer.Application.UnitTests.Mock.Queries
+namespace SlotGameServer.Application.UnitTests.Spin.Queries
 {
     public class GetGameBetsDetailsQueryHandlerTests
     {

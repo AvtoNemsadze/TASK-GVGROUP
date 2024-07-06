@@ -6,7 +6,7 @@ using SlotGameServer.Application.Spin.Commands.Games;
 using SlotGameServer.Domain.Entities;
 using Xunit;
 
-namespace SlotGameServer.Application.UnitTests.Mock.Commands
+namespace SlotGameServer.Application.UnitTests.Spin.Commands
 {
     public class SpinCommandHandlerTests
     {
