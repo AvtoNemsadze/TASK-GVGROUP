@@ -1,6 +1,7 @@
 <h2>Slot Game Backend API<h2></h2> <br/>
 This project is a backend API for a slot game, built with .NET Core, using a CQRS pattern and Mediator for handling commands and queries. The API supports user authentication, betting, and game session management. It includes a SpinCommandHandler that processes spin requests, validates user balance, calculates spin outcomes, updates game statistics, and maintains bet records. <br />
 
+
 <strong>Game Mechanics</strong>
 - Spin Logic: Players place a bet and choose a number. The game generates a random number between 1 and 10. If the player's chosen number matches the generated number, the player wins double their bet amount. <br />
 - Winning Logic: The EvaluateSpinResult method determines the outcome by comparing the player's chosen number with the generated number, calculating the winnings, and providing a success or failure message. <br />
