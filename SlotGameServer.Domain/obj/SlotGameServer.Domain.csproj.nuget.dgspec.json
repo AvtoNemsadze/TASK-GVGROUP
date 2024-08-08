@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj": {}
+    "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
+    "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj",
         "projectName": "SlotGameServer.Common",
-        "projectPath": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj",
+        "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -111,14 +111,14 @@
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj": {
+    "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj",
         "projectName": "SlotGameServer.Domain",
-        "projectPath": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj",
+        "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\obj\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -135,8 +135,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
+              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
               }
             }
           }

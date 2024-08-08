@@ -4675,11 +4675,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj",
       "projectName": "SlotGameServer.Persistence",
-      "projectPath": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj",
+      "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\obj\\",
+      "outputPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4696,11 +4696,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
-              "projectPath": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj"
+            "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
+              "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj"
             },
-            "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
-              "projectPath": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
+            "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
+              "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
             }
           }
         }

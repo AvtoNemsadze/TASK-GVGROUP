@@ -14,5 +14,10 @@ namespace SlotGameServer.Application.SignalR
         {
             await Clients.All.SendAsync("ReceiveNotification", message);
         }
+
+        public async Task SendSpinResult(string userId, string message)
+        {
+            await Clients.User(userId).SendAsync("ReceiveSpinResult", message);
+        }
     }
 }

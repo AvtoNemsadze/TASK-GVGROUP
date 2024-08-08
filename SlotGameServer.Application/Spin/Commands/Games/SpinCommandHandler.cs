@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.SignalR;
 using SlotGameServer.Application.Contracts.Identity;
 using SlotGameServer.Application.Contracts.Persistence;
+using SlotGameServer.Application.SignalR;
 using SlotGameServer.Domain.Entities;
 
 namespace SlotGameServer.Application.Spin.Commands.Games 
@@ -10,10 +12,12 @@ namespace SlotGameServer.Application.Spin.Commands.Games
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IUserService _userService;
-        public SpinCommandHandler(IUnitOfWork unitOfWork, IUserService userService)
+        private readonly IHubContext<GameUpdatesHub> _hubContext;
+        public SpinCommandHandler(IUnitOfWork unitOfWork, IUserService userService, IHubContext<GameUpdatesHub> hubContext)
         {
             _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
-            _userService = userService ?? throw new ArgumentNullException();
+            _userService = userService ?? throw new ArgumentNullException(nameof(userService));
+            _hubContext = hubContext ?? throw new ArgumentNullException(nameof(hubContext));
         }
 
         public async Task<object> Handle(SpinCommand request, CancellationToken cancellationToken)
@@ -25,7 +29,14 @@ namespace SlotGameServer.Application.Spin.Commands.Games
             }
 
             SpinResult spinResult = EvaluateSpinResult(request);
-            
+
+            // Notify the user of the spin result immediately
+            var message = spinResult.IsWin ?
+                $"Congratulations! You won {spinResult.Winnings}!" :
+                "Sorry, you lost. Better luck next time!";
+            await _hubContext.Clients.User(request.CreateUserId.ToString()).SendAsync("ReceiveSpinResult", message);
+
+
             await _userService.UpdatePlayerStatistics(request.CreateUserId, spinResult.IsWin);
 
             GameSessionEntity session = await _unitOfWork.GameSessionRepository

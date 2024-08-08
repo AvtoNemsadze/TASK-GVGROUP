@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "URHOhMIEsIeqEIPCeHcSwbeJzn24+jT7ukRtiGyrC5UVbeQMoeq3aRUY/6rZhcDz/9ErJGncKA3oDD2CkW35lw==",
+  "dgSpecHash": "/ns9DEb3z9oSXycWjxYeiaqnXnMXFF1HTlhMbJAGXfI+FiUj4/YSo0IA+uAFKjjzZkpHhv9osDmQpZF1QBkHBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uTKqmueWYyAu4HUPTypLqSHWhvSEicAa+3jqy0FuvS1vLCJvKtGvArpevMhnefFeHMGnFiCkGDFiJBjgr0hPIA==",
+  "dgSpecHash": "9o+sbECmIzqQa9ZARn5ezYydnFa+RM+YmgcjG0tMkHq6iv8JNAuN2wGDyxfqRZgKh3j2pm9i+EX+oHvrHDl0Vw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\Desktop\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj",
+  "projectFilePath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

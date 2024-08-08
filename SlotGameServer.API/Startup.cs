@@ -5,7 +5,7 @@ using SlotGameServer.Application.SignalR;
 using SlotGameServer.Identity;
 using SlotGameServer.Infrastructure;
 using SlotGameServer.Persistence;
-
+ 
 namespace SlotGameServer.API
 {
     public class Startup
