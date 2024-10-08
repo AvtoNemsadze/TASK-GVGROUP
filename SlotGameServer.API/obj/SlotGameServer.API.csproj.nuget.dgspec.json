@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.API\\SlotGameServer.API.csproj": {}
+    "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.API\\SlotGameServer.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.API\\SlotGameServer.API.csproj": {
+    "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.API\\SlotGameServer.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.API\\SlotGameServer.API.csproj",
+        "projectUniqueName": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.API\\SlotGameServer.API.csproj",
         "projectName": "SlotGameServer.API",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.API\\SlotGameServer.API.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.API\\obj\\",
+        "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.API\\SlotGameServer.API.csproj",
+        "packagesPath": "C:\\Users\\anemsadze\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anemsadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,26 +22,27 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\SlotGameServer.Application.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Identity\\SlotGameServer.Identity.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Identity\\SlotGameServer.Identity.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Identity\\SlotGameServer.Identity.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Identity\\SlotGameServer.Identity.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Infrastructure\\SlotGameServer.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Infrastructure\\SlotGameServer.Infrastructure.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Infrastructure\\SlotGameServer.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Infrastructure\\SlotGameServer.Infrastructure.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj"
               }
             }
           }
@@ -50,6 +51,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -98,6 +104,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -106,21 +130,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
+    "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj",
+        "projectUniqueName": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\SlotGameServer.Application.csproj",
         "projectName": "SlotGameServer.Application",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\obj\\",
+        "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\SlotGameServer.Application.csproj",
+        "packagesPath": "C:\\Users\\anemsadze\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anemsadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,17 +152,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj"
               }
             }
           }
@@ -147,6 +172,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -193,26 +223,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
+    "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj",
+        "projectUniqueName": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\SlotGameServer.Common.csproj",
         "projectName": "SlotGameServer.Common",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\obj\\",
+        "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\SlotGameServer.Common.csproj",
+        "packagesPath": "C:\\Users\\anemsadze\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anemsadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -220,6 +264,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -232,6 +277,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -300,26 +350,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj": {
+    "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj",
         "projectName": "SlotGameServer.Domain",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Domain\\obj\\",
+        "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Domain\\SlotGameServer.Domain.csproj",
+        "packagesPath": "C:\\Users\\anemsadze\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anemsadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -327,14 +391,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
               }
             }
           }
@@ -343,6 +408,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -359,26 +429,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Identity\\SlotGameServer.Identity.csproj": {
+    "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Identity\\SlotGameServer.Identity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Identity\\SlotGameServer.Identity.csproj",
+        "projectUniqueName": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Identity\\SlotGameServer.Identity.csproj",
         "projectName": "SlotGameServer.Identity",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Identity\\SlotGameServer.Identity.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Identity\\obj\\",
+        "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Identity\\SlotGameServer.Identity.csproj",
+        "packagesPath": "C:\\Users\\anemsadze\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Identity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anemsadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -386,17 +470,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\SlotGameServer.Application.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj"
               }
             }
           }
@@ -405,6 +490,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -453,26 +543,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Infrastructure\\SlotGameServer.Infrastructure.csproj": {
+    "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Infrastructure\\SlotGameServer.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Infrastructure\\SlotGameServer.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Infrastructure\\SlotGameServer.Infrastructure.csproj",
         "projectName": "SlotGameServer.Infrastructure",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Infrastructure\\SlotGameServer.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Infrastructure\\SlotGameServer.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\anemsadze\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anemsadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -480,14 +584,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\SlotGameServer.Application.csproj"
               }
             }
           }
@@ -496,6 +601,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -522,26 +632,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj": {
+    "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj",
         "projectName": "SlotGameServer.Persistence",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Persistence\\SlotGameServer.Persistence.csproj",
+        "packagesPath": "C:\\Users\\anemsadze\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anemsadze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -549,17 +673,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Application\\SlotGameServer.Application.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\SlotGameServer.Application.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Application\\SlotGameServer.Application.csproj"
               },
-              "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\Dev\\GVGROUP\\SlotGameServer\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
+              "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\SlotGameServer.Common.csproj": {
+                "projectPath": "C:\\Users\\anemsadze\\Desktop\\TASK-GVGROUP\\SlotGameServer.Common\\SlotGameServer.Common.csproj"
               }
             }
           }
@@ -568,6 +693,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -618,12 +748,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

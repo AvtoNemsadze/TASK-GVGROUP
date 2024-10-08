@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SlotGameServer.Identity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3629cf71e94432dd312fc52ae09d71e6df7744d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("SlotGameServer.Identity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SlotGameServer.Identity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
